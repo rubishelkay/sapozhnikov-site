@@ -1,0 +1,42 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title: string;
+  /** Original ReadyMag URL we'll mirror later. */
+  sourceUrl?: string;
+}
+
+const { title, sourceUrl } = Astro.props;
+---
+<BaseLayout title={title} bodyClass="page-stub">
+  <section class="stub">
+    <h1>{title}</h1>
+    <p class="muted">
+      Эта страница ещё в работе. Контент с ReadyMag перенесём в одной из следующих фаз миграции.
+    </p>
+    {sourceUrl && (
+      <p>
+        Текущая ReadyMag-версия: <a href={sourceUrl} rel="noopener external">{sourceUrl}</a>
+      </p>
+    )}
+  </section>
+</BaseLayout>
+
+<style>
+  .stub {
+    max-width: var(--container-max);
+    margin: var(--space-16) auto;
+    padding: 0 var(--gutter);
+  }
+
+  h1 {
+    font-size: var(--fs-xl);
+    line-height: var(--lh-tight);
+    margin-bottom: var(--space-6);
+  }
+
+  .muted {
+    color: var(--color-fg-muted);
+  }
+</style>

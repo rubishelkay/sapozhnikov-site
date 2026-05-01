@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { projects } from "../data/projects";
+---
+<BaseLayout
+  title="Sergey Sapozhnikov"
+  description="Sergey Sapozhnikov — фотограф и художник из Ростова-на-Дону. Персональные проекты, выставки и архив 2003-2018."
+  bodyClass="page-index"
+>
+  <section class="hero">
+    <h1>Sergey Sapozhnikov</h1>
+    <p class="lede">Фотограф и художник. Ростов-на-Дону / Москва.</p>
+    <ul class="project-list">
+      {projects.map((p) => (
+        <li>
+          <a href={p.href}>
+            <span class="title">{p.title}</span>
+            {p.hint && <span class="hint">{p.hint}</span>}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    max-width: var(--container-max);
+    margin: var(--space-16) auto;
+    padding: 0 var(--gutter);
+  }
+
+  h1 {
+    font-size: var(--fs-xxl);
+    line-height: var(--lh-tight);
+    margin-bottom: var(--space-4);
+  }
+
+  .lede {
+    font-size: var(--fs-lg);
+    color: var(--color-fg-muted);
+    margin-bottom: var(--space-12);
+  }
+
+  .project-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    font-size: var(--fs-lg);
+  }
+
+  .project-list a {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    align-items: baseline;
+  }
+
+  .hint {
+    color: var(--color-fg-muted);
+    font-size: var(--fs-md);
+  }
+</style>

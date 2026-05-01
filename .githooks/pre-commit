@@ -1,0 +1,36 @@
+#!/bin/sh
+# Reject any staged file larger than MAX_BYTES.
+# Activate once per clone with:  git config core.hooksPath .githooks
+
+set -e
+
+MAX_MB=25
+MAX_BYTES=$((MAX_MB * 1024 * 1024))
+
+# Portable file-size: BSD `stat -f %z` (macOS) falls back to GNU `stat -c %s`.
+filesize() {
+  stat -f %z "$1" 2>/dev/null || stat -c %s "$1" 2>/dev/null || wc -c < "$1"
+}
+
+oversize=""
+while IFS= read -r f; do
+  [ -z "$f" ] && continue
+  [ ! -f "$f" ] && continue
+  size=$(filesize "$f")
+  [ -z "$size" ] && continue
+  if [ "$size" -gt "$MAX_BYTES" ]; then
+    human=$(awk -v s="$size" 'BEGIN { printf "%.1f MB", s/1024/1024 }')
+    oversize="${oversize}  ${f} (${human})\n"
+  fi
+done <<EOF
+$(git diff --cached --name-only --diff-filter=AM)
+EOF
+
+if [ -n "$oversize" ]; then
+  printf '\n\033[31mpre-commit refused: file(s) larger than %s MB are staged:\033[0m\n' "$MAX_MB"
+  printf "$oversize"
+  printf '\nAdd them to .gitignore or store outside the repo (e.g. local source/ folder, R2, external disk).\n\n'
+  exit 1
+fi
+
+exit 0
