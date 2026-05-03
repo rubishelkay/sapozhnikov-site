@@ -1,0 +1,9 @@
+{
+  "name": "sapozhnikov-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix sapozhnikov-site-2026 ci && npm --prefix sapozhnikov-site-2026 run build && node scripts/cloudflare-build.mjs",
+    "check": "npm --prefix sapozhnikov-site-2026 run check"
+  }
+}
