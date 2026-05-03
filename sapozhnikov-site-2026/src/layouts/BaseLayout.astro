@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Class added to <body> for page-specific overrides. */
+  bodyClass?: string;
+  /** Skip site header and footer — used by the bare index splash. */
+  noChrome?: boolean;
+}
+
+const { title, description, bodyClass, noChrome = false } = Astro.props;
+const fullTitle = title === "Sergey Sapozhnikov" ? title : `${title} — Sergey Sapozhnikov`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+---
+<!doctype html>
+<html lang="ru" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500&subset=latin,cyrillic"
+      rel="stylesheet"
+    />
+  </head>
+  <body class={bodyClass}>
+    {!noChrome && <SiteHeader />}
+    <main id="main">
+      <slot />
+    </main>
+    {!noChrome && <SiteFooter />}
+  </body>
+</html>

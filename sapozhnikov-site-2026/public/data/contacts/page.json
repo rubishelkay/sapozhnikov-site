@@ -1,0 +1,13 @@
+{
+  "stage_h": 1248,
+  "blocks": {
+    "main": {
+      "left": 162,
+      "top": 132,
+      "w": 665,
+      "h": 464,
+      "z": 301,
+      "html": "<p><a class=\"link\" href=\"mailto:sapo21@yandex.ru\">sapo21@yandex.ru</a></p>"
+    }
+  }
+}

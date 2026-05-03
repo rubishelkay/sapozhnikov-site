@@ -1,0 +1,228 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import IndexMenu from "../components/IndexMenu.astro";
+
+import manifest from "../../public/assets/images/photos-2003-2011/manifest.json";
+import text from "../../public/assets/images/photos-2003-2011/text.json";
+
+/*
+  1:1 port of https://sergeysapozhnikov.ru/2003-2011/
+
+  Original ReadyMag stage: 1024 × 54660.5 px. RU essay sits at the
+  top (left:162, top:127, width:680, height:3093, z:302), then the
+  EN companion essay "Restless Stillness" (left:162, top:3287,
+  width:680, height:2615, z:304), followed by 75 photographs spread
+  across the asymmetric canvas down to top ~54522.
+
+  Below 1024 px the stage scales uniformly; on phones it becomes a
+  single-column long scroll (RU narrative → EN narrative → photos).
+*/
+
+const STAGE_W = 1024;
+const STAGE_H = 54661;
+
+const RU_BLOCK = text.ru_block;
+const EN_BLOCK = text.en_block;
+---
+<BaseLayout
+  title="2003 – 2011"
+  description="Sergey Sapozhnikov. 2003 – 2011 / Restless Stillness — двуязычное эссе и фотосерия ранних лет."
+  bodyClass="page-photos-2003-2011"
+  noChrome
+>
+  <IndexMenu />
+
+  <div class="stage-wrap">
+    <div
+      class="stage"
+      style={`width:${STAGE_W}px; height:${STAGE_H}px;`}
+    >
+      <article
+        class="text ru"
+        style={`left:${RU_BLOCK.left}px; top:${RU_BLOCK.top}px; width:${RU_BLOCK.w}px; min-height:${RU_BLOCK.h}px; z-index:${RU_BLOCK.z};`}
+      >
+        <h1>{text.title}</h1>
+        {text.ru_subtitle && <h2 class="subtitle">{text.ru_subtitle}</h2>}
+        {text.ru_author && <h3 class="byline">{text.ru_author}</h3>}
+        {text.ru_paragraphs.map((p: string) => <p>{p}</p>)}
+      </article>
+
+      <article
+        class="text en"
+        style={`left:${EN_BLOCK.left}px; top:${EN_BLOCK.top}px; width:${EN_BLOCK.w}px; min-height:${EN_BLOCK.h}px; z-index:${EN_BLOCK.z};`}
+      >
+        {text.en_title && <h2 class="subtitle">{text.en_title}</h2>}
+        {text.en_author && <h3 class="byline">{text.en_author}</h3>}
+        {text.en_paragraphs.map((p: string) => <p>{p}</p>)}
+      </article>
+
+      {manifest.map((item: any, i: number) => {
+        const rot = typeof item.rotate === "number" ? item.rotate : 0;
+        const style = `left:${item.left}px; top:${item.top}px; width:${item.w}px; height:${item.h}px; z-index:${item.z};${rot ? ` transform: rotate(${rot}deg);` : ""}`;
+        if (item.kind === "image") {
+          return (
+            <figure class="media image" style={style}>
+              <img
+                src={`/assets/images/photos-2003-2011/${item.file}`}
+                alt={`Sergey Sapozhnikov, 2003–2011, work ${i + 1}`}
+                loading={item.top < 7000 ? "eager" : "lazy"}
+                decoding="async"
+              />
+            </figure>
+          );
+        }
+        return (
+          <div class="media video" style={style}>
+            <iframe
+              src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&mute=1&playsinline=1&controls=1&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1`}
+              title={`Sergey Sapozhnikov, 2003–2011, video ${i + 1}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  :global(body.page-photos-2003-2011) {
+    margin: 0;
+    background: #ffffff;
+    color: #222222;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  :global(body.page-photos-2003-2011 main) {
+    display: block;
+  }
+
+  .stage-wrap {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    display: flex;
+    justify-content: center;
+  }
+
+  .stage {
+    position: relative;
+    flex: 0 0 auto;
+    transform-origin: top center;
+  }
+
+  .media,
+  .text {
+    position: absolute;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .media.image img,
+  .media.video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: cover;
+  }
+
+  .text {
+    color: #222222;
+  }
+
+  .text h1 {
+    margin: 0 0 28px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  .text h2.subtitle {
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+  }
+
+  .text h3.byline {
+    margin: 0 0 24px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  .text p {
+    margin: 0 0 24px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+
+  /* Tablet / intermediate viewports — uniform scale of the 1024px stage. */
+  @media (max-width: 1024px) and (min-width: 721px) {
+    .stage {
+      --scale: calc(100vw / 1024px);
+      transform: scale(var(--scale));
+    }
+    .stage-wrap {
+      height: calc(54661 * 100vw / 1024);
+    }
+  }
+
+  /* Mobile — single-column long scroll (RU → EN → photos). */
+  @media (max-width: 720px) {
+    .stage-wrap {
+      width: 100%;
+      padding: 24px 20px 64px;
+      box-sizing: border-box;
+    }
+    .stage {
+      width: 100% !important;
+      height: auto !important;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transform: none;
+    }
+    .media,
+    .text {
+      position: static !important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 0 !important;
+      max-width: 100%;
+      left: auto !important;
+      top: auto !important;
+    }
+    .text.ru {
+      margin-bottom: 16px;
+    }
+    .text.en {
+      margin-bottom: 24px;
+    }
+    .text h1 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    .text h2 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .media.image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .media.video {
+      aspect-ratio: 16 / 9;
+    }
+    .media.video iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>

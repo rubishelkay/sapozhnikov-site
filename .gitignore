@@ -16,6 +16,8 @@ site/src/assets/originals/
 # Local visual-regression screenshots are an artifact, regenerate on demand.
 source/parse-1/screenshots/
 **/screenshots/local-*.png
+output/
+.claude/
 
 # --- Common heavy media that has no business in git ---
 *.tif

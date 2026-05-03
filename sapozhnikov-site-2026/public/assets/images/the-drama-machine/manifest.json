@@ -1,0 +1,410 @@
+[
+  {
+    "kind": "image",
+    "file": "the-drama-machine-001.jpg",
+    "left": 184,
+    "top": 9769,
+    "w": 650,
+    "h": 539,
+    "z": 302,
+    "readymag": "upload-331cfb3e-b702-4fe3-8970-47bb641f7268.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-002.jpg",
+    "left": 152,
+    "top": 10336,
+    "w": 305,
+    "h": 372,
+    "z": 303,
+    "readymag": "upload-03f48819-d6a8-4f3c-a720-bbd3a9045b80.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-003.jpg",
+    "left": 499,
+    "top": 10407,
+    "w": 372,
+    "h": 301,
+    "z": 304,
+    "readymag": "upload-5400bec5-9e42-4929-aef4-e373d17e9ad3.jpg"
+  },
+  {
+    "kind": "video",
+    "youtubeId": "VLZKyzkyyIU",
+    "left": 162,
+    "top": 10749,
+    "w": 850,
+    "h": 499,
+    "z": 305
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-005.jpg",
+    "left": 286,
+    "top": 11302,
+    "w": 216,
+    "h": 172,
+    "z": 308,
+    "readymag": "upload-1b942d69-ea2a-4448-9968-7163fa5f5aa2.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-006.jpg",
+    "left": 798,
+    "top": 11302,
+    "w": 214,
+    "h": 172,
+    "z": 306,
+    "readymag": "upload-b317238b-07b8-4354-a57e-a3b7f6489404.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-007.jpg",
+    "left": 607,
+    "top": 11373,
+    "w": 219,
+    "h": 172,
+    "z": 307,
+    "readymag": "upload-f7752219-bf8d-4229-bd38-d2cdea3cde19.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-008.jpg",
+    "left": 393,
+    "top": 11474,
+    "w": 214,
+    "h": 172,
+    "z": 309,
+    "readymag": "upload-03f08d7a-5d16-4ee5-8da0-71e7cce51ebf.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-009.jpg",
+    "left": 582,
+    "top": 11530,
+    "w": 216,
+    "h": 172,
+    "z": 310,
+    "readymag": "upload-af16147e-642b-45b4-88a8-ad1cf452fd46.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-010.jpg",
+    "left": 365,
+    "top": 11675,
+    "w": 217,
+    "h": 172,
+    "z": 317,
+    "readymag": "upload-bf8e967d-8e43-4736-b75b-36564acbaaf0.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-011.jpg",
+    "left": 112,
+    "top": 11711,
+    "w": 216,
+    "h": 172,
+    "z": 313,
+    "readymag": "upload-aa9c99b8-86fc-454a-b059-4c890bf79cf1.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-012.jpg",
+    "left": 544,
+    "top": 11711,
+    "w": 216,
+    "h": 172,
+    "z": 316,
+    "readymag": "upload-fdb87373-38e4-42f9-9b46-167cf715e5b0.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-013.jpg",
+    "left": 795,
+    "top": 11711,
+    "w": 217,
+    "h": 172,
+    "z": 321,
+    "readymag": "upload-4d7d4fb7-100e-4c84-8733-fda205487375.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-014.jpg",
+    "left": 44,
+    "top": 11874,
+    "w": 217,
+    "h": 172,
+    "z": 314,
+    "readymag": "upload-eea24231-5e42-4370-9cf1-af1df9a95f4a.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-015.jpg",
+    "left": 261,
+    "top": 11874,
+    "w": 216,
+    "h": 172,
+    "z": 312,
+    "readymag": "upload-6b951cef-6bea-43a4-b55c-c0456c5b2978.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-016.jpg",
+    "left": 514,
+    "top": 11874,
+    "w": 216,
+    "h": 172,
+    "z": 318,
+    "readymag": "upload-3839b9b5-a687-4c08-902f-8b674bb3a278.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-017.jpg",
+    "left": 718,
+    "top": 11874,
+    "w": 217,
+    "h": 172,
+    "z": 320,
+    "readymag": "upload-58b1926f-ccc4-48f5-9fcb-1d926d906925.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-018.jpg",
+    "left": 112,
+    "top": 12046,
+    "w": 216,
+    "h": 172,
+    "z": 315,
+    "readymag": "upload-a1e7cd38-c6f2-4488-b79d-36c1cd78992c.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-019.jpg",
+    "left": 466,
+    "top": 12046,
+    "w": 218,
+    "h": 172,
+    "z": 311,
+    "readymag": "upload-93045f31-59b6-4798-a653-7ebec68ff55a.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-020.jpg",
+    "left": 796,
+    "top": 12046,
+    "w": 216,
+    "h": 172,
+    "z": 319,
+    "readymag": "upload-1ccea765-56dd-4fff-b3a9-dbf131d9383f.jpg"
+  },
+  {
+    "kind": "video",
+    "youtubeId": "1Pf3Ho1Tdhc",
+    "left": 162,
+    "top": 12260,
+    "w": 850,
+    "h": 460,
+    "z": 322
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-022.jpg",
+    "left": 267,
+    "top": 12779,
+    "w": 523,
+    "h": 651,
+    "z": 326,
+    "readymag": "upload-ffb34fcf-d297-4cf7-a239-b65fe91e5ded.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-023.jpg",
+    "left": -12,
+    "top": 13450,
+    "w": 521,
+    "h": 647,
+    "z": 325,
+    "readymag": "upload-87591d98-5114-43d6-983e-65f5f3979223.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-024.jpg",
+    "left": 522,
+    "top": 13453,
+    "w": 519,
+    "h": 648,
+    "z": 324,
+    "readymag": "upload-af7a3fd9-40fd-4991-863b-72cbd23ed29b.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-025.jpg",
+    "left": -11,
+    "top": 14109,
+    "w": 514,
+    "h": 626,
+    "z": 328,
+    "readymag": "upload-e266fcb1-70da-446f-aa9a-d526b23481ff.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-026.jpg",
+    "left": 518,
+    "top": 14109,
+    "w": 511,
+    "h": 625,
+    "z": 327,
+    "readymag": "upload-de7b1db2-8468-4a95-b5b9-eeb10fc15836.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-027.jpg",
+    "left": 201,
+    "top": 14774,
+    "w": 288,
+    "h": 358,
+    "z": 329,
+    "readymag": "upload-a2d6d517-7022-443c-80f6-38da50acacdd.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-028.jpg",
+    "left": 528,
+    "top": 14774,
+    "w": 294,
+    "h": 358,
+    "z": 332,
+    "readymag": "upload-7bac78a7-6622-42bc-b6f9-458e470d800b.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-029.jpg",
+    "left": 198,
+    "top": 15151,
+    "w": 292,
+    "h": 358,
+    "z": 330,
+    "readymag": "upload-36f9af30-f864-4e0b-89bc-ce8ce7ff0ff9.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-030.jpg",
+    "left": 529,
+    "top": 15151,
+    "w": 291,
+    "h": 358,
+    "z": 331,
+    "readymag": "upload-a8125b90-4638-4565-af01-d59044b356b9.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-031.jpg",
+    "left": 295,
+    "top": 15481,
+    "w": 290,
+    "h": 357,
+    "z": 338,
+    "readymag": "upload-04debafe-9195-4170-91cb-5acddf66d990.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-032.jpg",
+    "left": 620,
+    "top": 15676,
+    "w": 293,
+    "h": 358,
+    "z": 337,
+    "readymag": "upload-b05e8c39-6034-47ec-ac9e-d31c2740f01e.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-033.jpg",
+    "left": 366,
+    "top": 15805,
+    "w": 290,
+    "h": 357,
+    "z": 334,
+    "readymag": "upload-120b5fd1-8895-40e1-aada-c13cbdbe7c0d.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-034.jpg",
+    "left": 7,
+    "top": 15840,
+    "w": 359,
+    "h": 292,
+    "z": 333,
+    "readymag": "upload-4547031b-0dcf-434a-909a-c571e83ed7de.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-035.jpg",
+    "left": 76,
+    "top": 16130,
+    "w": 289,
+    "h": 358,
+    "z": 335,
+    "readymag": "upload-4204ee61-51b9-4ad4-8b61-d38282b4394d.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-036.jpg",
+    "left": 401,
+    "top": 16197,
+    "w": 356,
+    "h": 292,
+    "z": 336,
+    "readymag": "upload-40a70df2-7c06-4423-9c76-7e99589b4792.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-037.jpg",
+    "left": 78,
+    "top": 16546,
+    "w": 442,
+    "h": 665,
+    "z": 342,
+    "readymag": "upload-10064c41-2036-4d85-a486-bfc317e60f26.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-038.jpg",
+    "left": 570,
+    "top": 16546,
+    "w": 442,
+    "h": 665,
+    "z": 343,
+    "readymag": "upload-b1ccc8d1-b20e-4110-897c-924dfd2f9f52.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-039.jpg",
+    "left": 331,
+    "top": 17260,
+    "w": 681,
+    "h": 454,
+    "z": 341,
+    "readymag": "upload-23407a4d-e919-4630-8031-144c10c484ce.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-040.jpg",
+    "left": 332,
+    "top": 17764,
+    "w": 680,
+    "h": 453,
+    "z": 340,
+    "readymag": "upload-c19752d9-f223-4fd3-ae00-2fa6fc04a1e9.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "the-drama-machine-041.jpg",
+    "left": 332,
+    "top": 18267,
+    "w": 680,
+    "h": 452,
+    "z": 339,
+    "readymag": "upload-4a80eaa0-3497-4dd3-8359-4a14ea1e2df0.jpg"
+  }
+]

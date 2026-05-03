@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import IndexMenu from "../components/IndexMenu.astro";
+
+import page from "../../public/data/links/page.json";
+
+/*
+  1:1 port of https://sergeysapozhnikov.ru/links/
+
+  Original ReadyMag stage: 1024 × 1073 px. Single text widget
+  (left:162, top:131, width:665, height:464, z:301) with the
+  artist's external links (gallery, Instagram, YouTube).
+*/
+
+const STAGE_W = 1024;
+const STAGE_H = page.stage_h;
+
+const MAIN = page.blocks.main;
+---
+<BaseLayout
+  title="Links"
+  description="Sergey Sapozhnikov. Внешние ссылки — галерея SmartArt, Instagram, YouTube."
+  bodyClass="page-links"
+  noChrome
+>
+  <IndexMenu />
+
+  <div class="stage-wrap">
+    <div
+      class="stage"
+      style={`width:${STAGE_W}px; height:${STAGE_H}px;`}
+    >
+      <article
+        class="text main"
+        style={`left:${MAIN.left}px; top:${MAIN.top}px; width:${MAIN.w}px; min-height:${MAIN.h}px; z-index:${MAIN.z};`}
+        set:html={MAIN.html}
+      />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  :global(body.page-links) {
+    margin: 0;
+    background: #ffffff;
+    color: #222222;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  :global(body.page-links main) {
+    display: block;
+  }
+
+  .stage-wrap {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    display: flex;
+    justify-content: center;
+  }
+
+  .stage {
+    position: relative;
+    flex: 0 0 auto;
+    transform-origin: top center;
+  }
+
+  .text {
+    position: absolute;
+    margin: 0;
+    box-sizing: border-box;
+    color: #222222;
+  }
+
+  .text :global(h1) {
+    margin: 0 0 28px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  .text :global(h4) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .text :global(p) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+
+  .text :global(a.link) {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity 0.15s ease;
+  }
+
+  .text :global(a.link:hover) {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 1024px) and (min-width: 721px) {
+    .stage {
+      --scale: calc(100vw / 1024px);
+      transform: scale(var(--scale));
+    }
+    .stage-wrap {
+      height: calc(1073 * 100vw / 1024);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .stage-wrap {
+      width: 100%;
+      padding: 24px 20px 64px;
+      box-sizing: border-box;
+    }
+    .stage {
+      width: 100% !important;
+      height: auto !important;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transform: none;
+    }
+    .text {
+      position: static !important;
+      width: 100% !important;
+      min-height: 0 !important;
+      max-width: 100%;
+      left: auto !important;
+      top: auto !important;
+    }
+  }
+</style>

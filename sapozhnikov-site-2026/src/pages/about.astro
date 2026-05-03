@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import IndexMenu from "../components/IndexMenu.astro";
+
+import page from "../../public/data/about/page.json";
+
+/*
+  1:1 port of https://sergeysapozhnikov.ru/about/
+
+  Original ReadyMag stage: 1024 × 6127 px. Two text widgets — RU
+  biography (left:162, top:131, width:665, height:2960, z:301) and
+  EN companion (left:162, top:3119, width:665, height:2926, z:302).
+*/
+
+const STAGE_W = 1024;
+const STAGE_H = page.stage_h;
+
+const RU = page.blocks.ru;
+const EN = page.blocks.en;
+---
+<BaseLayout
+  title="About"
+  description="Sergey Sapozhnikov. Биография, образование, выставки и публикации."
+  bodyClass="page-about"
+  noChrome
+>
+  <IndexMenu />
+
+  <div class="stage-wrap">
+    <div
+      class="stage"
+      style={`width:${STAGE_W}px; height:${STAGE_H}px;`}
+    >
+      <article
+        class="text ru"
+        style={`left:${RU.left}px; top:${RU.top}px; width:${RU.w}px; min-height:${RU.h}px; z-index:${RU.z};`}
+        set:html={RU.html}
+      />
+
+      <article
+        class="text en"
+        style={`left:${EN.left}px; top:${EN.top}px; width:${EN.w}px; min-height:${EN.h}px; z-index:${EN.z};`}
+        set:html={EN.html}
+      />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  :global(body.page-about) {
+    margin: 0;
+    background: #ffffff;
+    color: #222222;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  :global(body.page-about main) {
+    display: block;
+  }
+
+  .stage-wrap {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+    display: flex;
+    justify-content: center;
+  }
+
+  .stage {
+    position: relative;
+    flex: 0 0 auto;
+    transform-origin: top center;
+  }
+
+  .text {
+    position: absolute;
+    margin: 0;
+    box-sizing: border-box;
+    color: #222222;
+  }
+
+  .text :global(h1) {
+    margin: 0 0 28px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  .text :global(h4) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .text :global(p) {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+
+  .text :global(a.link) {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity 0.15s ease;
+  }
+
+  .text :global(a.link:hover) {
+    opacity: 0.5;
+  }
+
+  /* Tablet / intermediate viewports — uniform scale of the 1024px stage. */
+  @media (max-width: 1024px) and (min-width: 721px) {
+    .stage {
+      --scale: calc(100vw / 1024px);
+      transform: scale(var(--scale));
+    }
+    .stage-wrap {
+      height: calc(6127 * 100vw / 1024);
+    }
+  }
+
+  /* Mobile — single-column long scroll (RU → EN). */
+  @media (max-width: 720px) {
+    .stage-wrap {
+      width: 100%;
+      padding: 24px 20px 64px;
+      box-sizing: border-box;
+    }
+    .stage {
+      width: 100% !important;
+      height: auto !important;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transform: none;
+    }
+    .text {
+      position: static !important;
+      width: 100% !important;
+      min-height: 0 !important;
+      max-width: 100%;
+      left: auto !important;
+      top: auto !important;
+    }
+    .text.ru {
+      margin-bottom: 16px;
+    }
+    .text :global(h1) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+</style>

@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import IndexMenu from "../components/IndexMenu.astro";
+---
+<BaseLayout
+  title="Sergey Sapozhnikov"
+  description="Sergey Sapozhnikov — фотограф и художник из Ростова-на-Дону. Персональные проекты, выставки и архив 2003-2018."
+  bodyClass="page-index"
+  noChrome
+>
+  <div class="splash" aria-hidden="true">
+    <img
+      src="/assets/images/index/index-001.jpg"
+      alt=""
+      width="918"
+      height="1129"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </div>
+
+  <IndexMenu animated />
+</BaseLayout>
+
+<style>
+  /*
+    The original ReadyMag intro on sergeysapozhnikov.ru:
+    a centred image is shown for ~5s, fades out, then the top-left
+    menu fades in (handled by IndexMenu's `animated` mode).
+  */
+
+  :global(body.page-index) {
+    margin: 0;
+    background: #ffffff;
+    color: #222222;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  :global(body.page-index main) {
+    display: block;
+  }
+
+  .splash {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 1;
+    animation: splash-fade 5.6s ease-out forwards;
+  }
+
+  .splash img {
+    /* Original ReadyMag widget: 459 × 564.57 px on a 1024 × 672 stage. */
+    width: min(459px, 80vw);
+    height: auto;
+    max-height: 84vh;
+    object-fit: contain;
+    display: block;
+  }
+
+  @keyframes splash-fade {
+    0%, 89% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+</style>
+
+<script>
+  // Allow keyboard / click to skip the splash early.
+  const splash = document.querySelector<HTMLElement>(".splash");
+  const menu = document.querySelector<HTMLElement>(".index-menu");
+  if (splash && menu) {
+    const skip = () => {
+      splash.style.animation = "none";
+      splash.style.opacity = "0";
+      menu.style.animation = "none";
+      menu.style.opacity = "1";
+    };
+    window.addEventListener("keydown", skip, { once: true });
+    splash.addEventListener("click", skip, { once: true });
+    document.addEventListener("click", skip, { once: true });
+  }
+</script>

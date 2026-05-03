@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import IndexMenu from "../components/IndexMenu.astro";
+import YouTubeEmbed from "../components/YouTubeEmbed.astro";
+
+import manifest from "../../public/assets/images/retro/manifest.json";
+const photos = manifest.map((m) => `/assets/images/retro/${m.filename}`);
+---
+<BaseLayout
+  title="Retrospective 2003-2018"
+  description="Sergey Sapozhnikov. New Tretyakov Gallery, Krymsky Val 10, Moscow. 28.01 — 29.03.2020. Curated by Maria Chiara di Trapani. Works 2003-2018."
+  bodyClass="page-retro"
+  noChrome
+>
+  <IndexMenu />
+
+  <article class="retro">
+    <header class="retro-head">
+      <h1>
+        Sergey Sapozhnikov.<br />
+        New Tretyakov Gallery, Krymsky Val 10, Moscow<br />
+        28.01 — 29.03.2020
+      </h1>
+      <h2 class="curator">Curated by Maria Chiara di Trapani</h2>
+      <p class="period">Works 2003-2018</p>
+    </header>
+
+    <div class="video">
+      <YouTubeEmbed id="6GBRIbJjET4" title="Sergey Sapozhnikov, New Tretyakov Gallery — exhibition video" />
+    </div>
+
+    <div class="photos">
+      {photos.map((src, i) => (
+        <figure>
+          <img
+            src={src}
+            alt={`Sergey Sapozhnikov, retrospective work ${i + 1}`}
+            loading={i < 2 ? "eager" : "lazy"}
+            decoding="async"
+          />
+        </figure>
+      ))}
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  /*
+    Layout mirrors ReadyMag retro page (1024px stage):
+    - menu fixed at left:30, top:50  (handled by IndexMenu)
+    - title block at left:161, top:127, ~681px wide, 30px Roboto
+    - photos column at left:162, width:848
+    Typography & colour 1:1 with the original (Roboto / #222 / white bg).
+  */
+
+  :global(body.page-retro) {
+    margin: 0;
+    background: #ffffff;
+    color: #222222;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  :global(body.page-retro main) {
+    display: block;
+  }
+
+  .retro {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 127px 0 96px 161px;
+    box-sizing: border-box;
+  }
+
+  .retro-head {
+    width: 681px;
+    max-width: 100%;
+    margin-bottom: 64px;
+  }
+
+  .retro-head h1 {
+    margin: 0 0 24px;
+    font-family: Roboto, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #222222;
+  }
+
+  .retro-head .curator {
+    margin: 0 0 24px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #222222;
+  }
+
+  .retro-head .period {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #222222;
+  }
+
+  .photos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 848px;
+    max-width: 100%;
+    margin-left: 1px; /* original 162 vs 161 — tiny ReadyMag offset */
+  }
+
+  .photos figure {
+    margin: 0;
+  }
+
+  .photos img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .video {
+    width: 848px;
+    max-width: 100%;
+    margin: 0 0 24px 1px; /* video sits between title block and first photo, mirroring original (top:397, photos:898) */
+  }
+
+  @media (max-width: 1080px) {
+    .retro {
+      padding-left: 280px;
+      padding-right: 24px;
+    }
+    .photos,
+    .video,
+    .retro-head {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .retro {
+      padding: 24px 20px;
+    }
+    .retro-head h1 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+    .retro-head .curator {
+      font-size: 17px;
+      line-height: 24px;
+    }
+  }
+</style>

@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import IndexMenu from "../components/IndexMenu.astro";
+import YouTubeEmbed from "../components/YouTubeEmbed.astro";
+
+import manifest from "../../public/assets/images/a-wonderful-day/manifest.json";
+const photos = manifest.map((m) => `/assets/images/a-wonderful-day/${m.filename}`);
+
+/*
+  Original ReadyMag stage places a YouTube video (G1K59iHt9ew, 848×477)
+  at top:3206 — between photo #4 (top:2520) and photo #5 (top:3733).
+*/
+const VIDEO_AFTER_INDEX = 4; // insert after the 4th photo (1-based)
+---
+<BaseLayout
+  title="A Wonderful Day (2018)"
+  description="Sergey Sapozhnikov. A Wonderful Day (2018) — Polaroids and large prints exhibited at Palazzo Butera, Palermo. The artist transports the interiors of the decaying Palazzo Costantino into the Russian countryside near Rostov-on-Don."
+  bodyClass="page-project"
+  noChrome
+>
+  <IndexMenu />
+
+  <article class="project">
+    <header class="project-head">
+      <h1>A Wonderful Day (2018)</h1>
+      <p class="lede">
+        The installation is composed of a series of small Polaroids arranged on a display table at Palazzo Butera, erected among the ruins of Palazzo Costantino, set in the landscape of the Russian countryside, as well as a selection of larger photographic prints. The artist often works with known and recognisable spaces, showing them from unusual and unexpected perspectives. For this series of new images, Sapozhnikov &lsquo;transported&rsquo; the interiors of the decaying noble palace located in Palermo so as to photograph them in his birthplace, Rostov-on-Don, creating works that set themselves apart for their exuberant visual vocabulary combining nature, architecture, and landscape.
+      </p>
+    </header>
+
+    <div class="photos">
+      {photos.map((src, i) => (
+        <>
+          <figure>
+            <img
+              src={src}
+              alt={`Sergey Sapozhnikov, A Wonderful Day, work ${i + 1}`}
+              loading={i < 2 ? "eager" : "lazy"}
+              decoding="async"
+            />
+          </figure>
+          {i + 1 === VIDEO_AFTER_INDEX && (
+            <div class="video">
+              <YouTubeEmbed id="G1K59iHt9ew" title="Sergey Sapozhnikov, A Wonderful Day — exhibition video" aspect="848 / 477" />
+            </div>
+          )}
+        </>
+      ))}
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  /*
+    Mirrors the ReadyMag layout (1024px stage):
+    - menu fixed top-left  (handled by IndexMenu)
+    - title block at left:161 / top:127 / width:681
+    - photos column at left:162 / width:848
+    Same typography & layout rules as the New Tretyakov Gallery page.
+  */
+
+  :global(body.page-project) {
+    margin: 0;
+    background: #ffffff;
+    color: #222222;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  :global(body.page-project main) {
+    display: block;
+  }
+
+  .project {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 127px 0 96px 161px;
+    box-sizing: border-box;
+  }
+
+  .project-head {
+    width: 681px;
+    max-width: 100%;
+    margin-bottom: 64px;
+  }
+
+  .project-head h1 {
+    margin: 0 0 24px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #222222;
+  }
+
+  .project-head .lede {
+    margin: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #222222;
+  }
+
+  .photos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 848px;
+    max-width: 100%;
+    margin-left: 1px;
+  }
+
+  .photos figure {
+    margin: 0;
+  }
+
+  .photos img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .photos .video {
+    width: 100%;
+  }
+
+  @media (max-width: 1080px) {
+    .project {
+      padding-left: 280px;
+      padding-right: 24px;
+    }
+    .photos,
+    .project-head {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .project {
+      padding: 24px 20px;
+    }
+    .project-head h1 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+</style>

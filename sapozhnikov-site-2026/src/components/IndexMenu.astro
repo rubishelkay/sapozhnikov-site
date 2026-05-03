@@ -1,0 +1,252 @@
+---
+/*
+  Top-left menu authored for the original ReadyMag site
+  (sergeysapozhnikov.ru). Same markup is reused across pages;
+  only `animated` differs — true on the index splash, false everywhere else.
+*/
+import { projects, infoLinks } from "../data/projects";
+
+interface Props {
+  /** Fade in after the splash on the home page only. */
+  animated?: boolean;
+}
+
+const { animated = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+<button
+  class="menu-toggle"
+  data-menu-toggle
+  type="button"
+  aria-label="Toggle menu"
+  aria-expanded="false"
+  aria-controls="site-menu"
+>
+  <span></span><span></span><span></span>
+</button>
+
+<nav
+  id="site-menu"
+  class={`index-menu${animated ? " is-animated" : ""}`}
+  data-menu
+  aria-label="Site"
+  aria-hidden="false"
+>
+  <h1 class="brand"><a href="/">Sergey Sapozhnikov</a></h1>
+
+  <section class="group">
+    <p class="group-title">Projects</p>
+    <ul>
+      {projects.map((p) => (
+        <li>
+          <a
+            href={p.href}
+            aria-current={currentPath === p.href ? "page" : undefined}
+          >{p.title}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="group">
+    <p class="group-title">Info</p>
+    <ul>
+      {infoLinks.map((l) => (
+        <li>
+          <a
+            href={l.href}
+            aria-current={currentPath === l.href ? "page" : undefined}
+          >{l.title}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</nav>
+
+<style>
+  .index-menu {
+    position: fixed;
+    top: 50px;
+    left: 30px;
+    width: 280px;
+    z-index: 1000;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color: #222222;
+  }
+
+  .index-menu.is-animated {
+    opacity: 0;
+    animation: index-menu-in 0.6s ease-out 5.2s forwards;
+  }
+
+  @keyframes index-menu-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  .index-menu .brand {
+    margin: 0 0 20px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  .index-menu .brand a {
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .index-menu .brand a:hover {
+    opacity: 0.5;
+  }
+
+  .group {
+    margin-bottom: 12px;
+  }
+
+  .group-title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 500;
+  }
+
+  .index-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .index-menu li {
+    margin: 0;
+  }
+
+  .index-menu a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #222222;
+    text-decoration: none;
+    background: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .index-menu a:hover {
+    opacity: 0.5;
+  }
+
+  .index-menu a[aria-current="page"] {
+    opacity: 0.75;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 720px) {
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 22px;
+      right: 20px;
+      width: 26px;
+      height: 18px;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      touch-action: manipulation;
+      z-index: 1101;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #222222;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .index-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      padding: 24px 20px 32px;
+      background: #ffffff;
+      overflow-y: auto;
+      pointer-events: none;
+      z-index: 1100;
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+    }
+
+    .index-menu.is-open {
+      pointer-events: auto;
+      transform: translateX(0);
+    }
+
+    :global(html.menu-open) {
+      overflow: hidden;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
+  const menu = document.querySelector<HTMLElement>("[data-menu]");
+
+  if (toggle && menu && !toggle.dataset.menuReady) {
+    toggle.dataset.menuReady = "true";
+
+    const setOpen = (open: boolean) => {
+      menu.classList.toggle("is-open", open);
+      menu.setAttribute("aria-hidden", open ? "false" : "true");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      document.documentElement.classList.toggle("menu-open", open);
+    };
+
+    toggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      setOpen(!menu.classList.contains("is-open"));
+    });
+
+    menu.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      if (target.closest("a")) setOpen(false);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!menu.classList.contains("is-open")) return;
+      const target = event.target as Node;
+      if (menu.contains(target) || toggle.contains(target)) return;
+      setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setOpen(false);
+    });
+  }
+</script>

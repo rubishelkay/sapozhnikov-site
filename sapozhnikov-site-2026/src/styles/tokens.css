@@ -1,0 +1,62 @@
+/*
+  Design tokens. Single place to read/change site-wide values.
+  Themes (auto / dark / light) will swap variables here in a later phase.
+*/
+
+:root {
+  /* Fonts: system stack, no web fonts on first iteration. */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Helvetica, Arial,
+    "Segoe UI", Roboto,
+    sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono",
+    Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Type scale. */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-xxl: 2.5rem;
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+  --lh-loose: 1.7;
+
+  /* Colors — light theme baseline (matches current ReadyMag look). */
+  --color-bg: #ffffff;
+  --color-fg: #222222;
+  --color-fg-muted: #6b6b6b;
+  --color-rule: #e6e6e6;
+  --color-link: #222222;
+  --color-link-underline: #222222;
+
+  /* Layout. */
+  --container-max: 1024px;
+  --gutter: 24px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+}
+
+/* Dark-mode placeholder. Wired later, keeping the hook so CSS doesn't churn. */
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --color-bg: #0e0e0e;
+    --color-fg: #efefef;
+    --color-fg-muted: #9a9a9a;
+    --color-rule: #2a2a2a;
+    --color-link: #efefef;
+    --color-link-underline: #efefef;
+  }
+}

@@ -1,0 +1,758 @@
+[
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-001.jpg",
+    "left": 280,
+    "top": 5829,
+    "w": 450,
+    "h": 648,
+    "z": 305,
+    "readymag": "upload-e75a2feb-38ee-47c7-9a36-15f57a165957.jpg",
+    "rotate": 90
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-002.jpg",
+    "left": 283,
+    "top": 6414,
+    "w": 436,
+    "h": 646,
+    "z": 306,
+    "readymag": "upload-3a462100-4795-419b-ae2a-2a81dc27e697.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-003.jpg",
+    "left": 234,
+    "top": 7111,
+    "w": 543,
+    "h": 545,
+    "z": 307,
+    "readymag": "upload-7b738cd5-fa10-4078-a73c-6efeacec142f.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-004.jpg",
+    "left": 233,
+    "top": 7720,
+    "w": 544,
+    "h": 546,
+    "z": 308,
+    "readymag": "upload-ff2a2d36-cae3-40cd-b2bd-ae148794e734.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-005.jpg",
+    "left": 241,
+    "top": 8316,
+    "w": 541,
+    "h": 545,
+    "z": 309,
+    "readymag": "upload-1fffd9b1-9ce1-4e69-9c17-fb1fa1e9c5ba.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-006.jpg",
+    "left": 239,
+    "top": 8909,
+    "w": 544,
+    "h": 546,
+    "z": 310,
+    "readymag": "upload-3b46e9ca-07cc-412d-9a79-c0a17b8b34e7.jpg",
+    "rotate": 270
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-007.jpg",
+    "left": 262,
+    "top": 9503,
+    "w": 496,
+    "h": 646,
+    "z": 311,
+    "readymag": "upload-93984456-34bf-4412-b256-f789d76285a1.jpg",
+    "rotate": 180
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-008.jpg",
+    "left": 248,
+    "top": 10197,
+    "w": 529,
+    "h": 648,
+    "z": 312,
+    "readymag": "upload-6bf59351-ca1b-45aa-976f-5f300de79281.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-009.jpg",
+    "left": 253,
+    "top": 10896,
+    "w": 519,
+    "h": 647,
+    "z": 313,
+    "readymag": "upload-55120df1-f20c-4133-80a9-56609c0e368f.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-010.jpg",
+    "left": 250,
+    "top": 11593,
+    "w": 520,
+    "h": 647,
+    "z": 314,
+    "readymag": "upload-79a645c7-81b0-4596-8380-60f1330a76d0.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-011.jpg",
+    "left": 250,
+    "top": 12290,
+    "w": 519,
+    "h": 648,
+    "z": 315,
+    "readymag": "upload-0263ccef-2e6a-435e-9737-d5b2d83e43f1.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-012.jpg",
+    "left": 181,
+    "top": 12990,
+    "w": 648,
+    "h": 499,
+    "z": 316,
+    "readymag": "upload-b69dd122-e681-4029-a334-51dba2ac5e8f.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-013.jpg",
+    "left": 251,
+    "top": 13540,
+    "w": 523,
+    "h": 648,
+    "z": 317,
+    "readymag": "upload-7cc358eb-b5f8-40da-a8b5-e7e11db86fba.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-014.jpg",
+    "left": 189,
+    "top": 14239,
+    "w": 647,
+    "h": 517,
+    "z": 318,
+    "readymag": "upload-f783b060-54a6-455a-8b75-a05d2fab4504.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-015.jpg",
+    "left": 248,
+    "top": 14809,
+    "w": 526,
+    "h": 647,
+    "z": 319,
+    "readymag": "upload-deac2147-8096-43c4-ba4b-d998e5dfcefb.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-016.jpg",
+    "left": 239,
+    "top": 15506,
+    "w": 543,
+    "h": 545,
+    "z": 320,
+    "readymag": "upload-d50ce0b9-f019-4b49-ac75-920c53cd1fca.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-017.jpg",
+    "left": 255,
+    "top": 16102,
+    "w": 517,
+    "h": 647,
+    "z": 321,
+    "readymag": "upload-4d606b84-46e9-45ae-be4f-46e5476958a7.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-018.jpg",
+    "left": 239,
+    "top": 16800,
+    "w": 540,
+    "h": 545,
+    "z": 322,
+    "readymag": "upload-90244178-0e4a-44b1-aed5-afa727b5e6fa.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-019.jpg",
+    "left": 237,
+    "top": 17396,
+    "w": 541,
+    "h": 546,
+    "z": 323,
+    "readymag": "upload-24103c86-458b-4f95-9ab5-545999fdd6d2.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-020.jpg",
+    "left": 234,
+    "top": 17992,
+    "w": 544,
+    "h": 545,
+    "z": 324,
+    "readymag": "upload-7a0991d8-922b-41b3-adb1-f76ebefe63d1.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-021.jpg",
+    "left": 233,
+    "top": 18588,
+    "w": 549,
+    "h": 545,
+    "z": 325,
+    "readymag": "upload-901c93a6-bdd1-4ba3-b46f-6b64302f9cdc.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-022.jpg",
+    "left": 235,
+    "top": 19184,
+    "w": 543,
+    "h": 545,
+    "z": 326,
+    "readymag": "upload-626838ff-dcd8-4791-8e6c-d21ae655d2ab.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-023.jpg",
+    "left": 237,
+    "top": 19779,
+    "w": 540,
+    "h": 545,
+    "z": 327,
+    "readymag": "upload-c3a804c1-187d-41c0-8537-a61461cd2440.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-024.jpg",
+    "left": 234,
+    "top": 20376,
+    "w": 544,
+    "h": 545,
+    "z": 328,
+    "readymag": "upload-de907cf6-6913-48ae-aa45-e4c2c9fd8c80.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-025.jpg",
+    "left": 242,
+    "top": 20970,
+    "w": 519,
+    "h": 648,
+    "z": 329,
+    "readymag": "upload-bce8d508-7213-4685-9052-d2c1c82a9955.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-026.jpg",
+    "left": 241,
+    "top": 21668,
+    "w": 519,
+    "h": 648,
+    "z": 330,
+    "readymag": "upload-8cc2c5ab-80d5-40b5-9a23-4173d12b1a53.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-027.jpg",
+    "left": 243,
+    "top": 22367,
+    "w": 519,
+    "h": 647,
+    "z": 331,
+    "readymag": "upload-b958df6a-c3b7-4b31-8fd5-52a5311c5c44.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-028.jpg",
+    "left": 241,
+    "top": 23063,
+    "w": 517,
+    "h": 648,
+    "z": 332,
+    "readymag": "upload-ee0027b2-bce1-4ad6-9a29-ff9a46e1b995.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-029.jpg",
+    "left": 241,
+    "top": 23761,
+    "w": 521,
+    "h": 648,
+    "z": 333,
+    "readymag": "upload-ff82a4bc-ad54-42cf-bc72-7e02a079e0e0.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-030.jpg",
+    "left": 240,
+    "top": 24460,
+    "w": 519,
+    "h": 647,
+    "z": 334,
+    "readymag": "upload-5e24c5a2-2136-4439-8c43-386b775d321b.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-031.jpg",
+    "left": 244,
+    "top": 25159,
+    "w": 515,
+    "h": 648,
+    "z": 335,
+    "readymag": "upload-ae6c7508-f701-49de-a99b-2d35cdde1136.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-032.jpg",
+    "left": 244,
+    "top": 25856,
+    "w": 517,
+    "h": 648,
+    "z": 336,
+    "readymag": "upload-bba1bd5c-2b51-4f39-9280-782d9f8ac1e1.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-033.jpg",
+    "left": 252,
+    "top": 26489,
+    "w": 522,
+    "h": 648,
+    "z": 337,
+    "readymag": "upload-6b72464e-1fba-41ee-a96a-a2ed0f241c57.jpg",
+    "rotate": 90
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-034.jpg",
+    "left": 254,
+    "top": 27124,
+    "w": 518,
+    "h": 648,
+    "z": 338,
+    "readymag": "upload-e52ed9f9-7f1e-4ed8-9c42-e7825d55c25f.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-035.jpg",
+    "left": 251,
+    "top": 27831,
+    "w": 522,
+    "h": 648,
+    "z": 339,
+    "readymag": "upload-8f8ad00c-7f29-4902-b379-47e297602311.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-036.jpg",
+    "left": 250,
+    "top": 28530,
+    "w": 522,
+    "h": 648,
+    "z": 340,
+    "readymag": "upload-97901ceb-d06c-494e-99ac-bec08b8bc0f2.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-037.jpg",
+    "left": 253,
+    "top": 29165,
+    "w": 520,
+    "h": 648,
+    "z": 341,
+    "readymag": "upload-a4f56bf7-408e-410c-ba35-4d5d65d01901.jpg",
+    "rotate": 90
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-038.jpg",
+    "left": 189,
+    "top": 29800,
+    "w": 648,
+    "h": 522,
+    "z": 342,
+    "readymag": "upload-4e91e17f-d051-41e8-ab1f-be54d55af2c9.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-039.jpg",
+    "left": 253,
+    "top": 30373,
+    "w": 517,
+    "h": 648,
+    "z": 343,
+    "readymag": "upload-3c72e17f-ad77-4ef1-8ea5-227b878c019a.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-040.jpg",
+    "left": 187,
+    "top": 31072,
+    "w": 648,
+    "h": 524,
+    "z": 344,
+    "readymag": "upload-22ebcadf-d84f-4078-a529-c4df82ea8dd5.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-041.jpg",
+    "left": 187,
+    "top": 31647,
+    "w": 648,
+    "h": 519,
+    "z": 345,
+    "readymag": "upload-22765fdb-839f-4037-b5fe-03d84e3cc573.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-042.jpg",
+    "left": 185,
+    "top": 32216,
+    "w": 648,
+    "h": 522,
+    "z": 346,
+    "readymag": "upload-28061a78-660a-4f15-8be1-0ed07bc61702.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-043.jpg",
+    "left": 186,
+    "top": 32788,
+    "w": 647,
+    "h": 523,
+    "z": 347,
+    "readymag": "upload-5fc0e00a-4976-4847-8b15-fead616a2543.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-044.jpg",
+    "left": 186,
+    "top": 33362,
+    "w": 648,
+    "h": 524,
+    "z": 348,
+    "readymag": "upload-2b1bb94c-4c8b-4480-83e0-a89ec6024810.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-045.jpg",
+    "left": 253,
+    "top": 33936,
+    "w": 518,
+    "h": 648,
+    "z": 349,
+    "readymag": "upload-c446b5ec-6a6c-4c6d-8986-2ab942bfe727.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-046.jpg",
+    "left": 253,
+    "top": 34634,
+    "w": 518,
+    "h": 648,
+    "z": 350,
+    "readymag": "upload-2d8b9ce8-9ce5-4ea8-b19f-8a8519f58f63.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-047.jpg",
+    "left": 196,
+    "top": 35332,
+    "w": 650,
+    "h": 526,
+    "z": 351,
+    "readymag": "upload-5c5a6034-d811-4a93-a6f9-6507d09f511a.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-048.jpg",
+    "left": 196,
+    "top": 35909,
+    "w": 649,
+    "h": 522,
+    "z": 352,
+    "readymag": "upload-3f6b736b-d97c-4c00-8a71-2ce0ab8e8b24.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-049.jpg",
+    "left": 193,
+    "top": 36479,
+    "w": 649,
+    "h": 524,
+    "z": 353,
+    "readymag": "upload-336709e5-14d1-4486-ad20-792bc1187ce6.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-050.jpg",
+    "left": 192,
+    "top": 37052,
+    "w": 650,
+    "h": 520,
+    "z": 354,
+    "readymag": "upload-a4360365-0a14-424f-8bcf-b9e1ba7b2e70.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-051.jpg",
+    "left": 192,
+    "top": 37624,
+    "w": 650,
+    "h": 526,
+    "z": 355,
+    "readymag": "upload-6b1447c5-c02c-4878-8951-3cb085a5d780.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-052.jpg",
+    "left": 255,
+    "top": 38201,
+    "w": 518,
+    "h": 648,
+    "z": 356,
+    "readymag": "upload-a0fca45c-767f-487b-9601-b58e86497c6e.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-053.jpg",
+    "left": 254,
+    "top": 38900,
+    "w": 521,
+    "h": 648,
+    "z": 357,
+    "readymag": "upload-5e97576e-840e-4d76-99b2-cd51ec84f895.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-054.jpg",
+    "left": 255,
+    "top": 39595,
+    "w": 519,
+    "h": 648,
+    "z": 358,
+    "readymag": "upload-b2e45a86-e859-4a1d-aea8-7f7ce9d1359c.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-055.jpg",
+    "left": 255,
+    "top": 40293,
+    "w": 518,
+    "h": 647,
+    "z": 359,
+    "readymag": "upload-f2e1e7d0-ebc7-47f0-bbba-6f55ef5d8388.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-056.jpg",
+    "left": 255,
+    "top": 40991,
+    "w": 523,
+    "h": 647,
+    "z": 360,
+    "readymag": "upload-eb975292-8972-4bc2-804a-16cb4e67e577.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-057.jpg",
+    "left": 188,
+    "top": 41689,
+    "w": 648,
+    "h": 518,
+    "z": 361,
+    "readymag": "upload-781c54cb-93ec-4674-9b6f-733d2f14d30c.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-058.jpg",
+    "left": 188,
+    "top": 42258,
+    "w": 650,
+    "h": 525,
+    "z": 362,
+    "readymag": "upload-af0ee382-a99e-40b1-8489-0cc08b2ce123.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-059.jpg",
+    "left": 193,
+    "top": 42834,
+    "w": 648,
+    "h": 522,
+    "z": 363,
+    "readymag": "upload-26045222-b3a3-4592-b8bf-b6306f0f62b4.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-060.jpg",
+    "left": 249,
+    "top": 43404,
+    "w": 524,
+    "h": 649,
+    "z": 364,
+    "readymag": "upload-92756319-276c-44cc-a688-3671d73bc12d.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-061.jpg",
+    "left": 248,
+    "top": 44104,
+    "w": 523,
+    "h": 648,
+    "z": 365,
+    "readymag": "upload-4bbbb657-62b9-42de-a47f-d8a4adc00571.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-062.jpg",
+    "left": 249,
+    "top": 44802,
+    "w": 520,
+    "h": 645,
+    "z": 366,
+    "readymag": "upload-6c116935-b341-4924-808c-d0aef477aac6.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-063.jpg",
+    "left": 242,
+    "top": 45495,
+    "w": 529,
+    "h": 650,
+    "z": 367,
+    "readymag": "upload-eba27583-9b61-48a9-b29c-90f662c7bdf7.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-064.jpg",
+    "left": 248,
+    "top": 46196,
+    "w": 521,
+    "h": 648,
+    "z": 368,
+    "readymag": "upload-e69d6f06-2533-42c5-a0db-0935c9a075cb.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-065.jpg",
+    "left": 250,
+    "top": 46894,
+    "w": 521,
+    "h": 649,
+    "z": 369,
+    "readymag": "upload-8b38f1be-e8df-4bcf-a68d-e72363bc3861.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-066.jpg",
+    "left": 188,
+    "top": 47659,
+    "w": 648,
+    "h": 518,
+    "z": 370,
+    "readymag": "upload-7e4eff78-15ef-4175-8ab4-c18576206ec3.jpg",
+    "rotate": 270
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-067.jpg",
+    "left": 248,
+    "top": 48292,
+    "w": 528,
+    "h": 648,
+    "z": 371,
+    "readymag": "upload-c1467579-dd8c-4712-a456-44f28a1e6980.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-068.jpg",
+    "left": 249,
+    "top": 48989,
+    "w": 522,
+    "h": 648,
+    "z": 372,
+    "readymag": "upload-e77df021-6ce3-4ef5-8ba8-8f60920e7880.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-069.jpg",
+    "left": 247,
+    "top": 49686,
+    "w": 527,
+    "h": 648,
+    "z": 373,
+    "readymag": "upload-2edf08bf-0775-4b6f-a9ff-7c38dc556f70.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-070.jpg",
+    "left": 251,
+    "top": 50384,
+    "w": 520,
+    "h": 648,
+    "z": 374,
+    "readymag": "upload-7ab0f061-1247-442a-9376-675cb5ee718d.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-071.jpg",
+    "left": 253,
+    "top": 51082,
+    "w": 519,
+    "h": 648,
+    "z": 375,
+    "readymag": "upload-03f649a0-4c48-428f-a7d4-56ff3c90da93.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-072.jpg",
+    "left": 251,
+    "top": 51780,
+    "w": 521,
+    "h": 648,
+    "z": 376,
+    "readymag": "upload-4492bda9-5072-4cd7-b78e-12453b6d32d3.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-073.jpg",
+    "left": 248,
+    "top": 52478,
+    "w": 526,
+    "h": 648,
+    "z": 377,
+    "readymag": "upload-0d3d2ae5-b86c-44c5-bcff-8731391bc2be.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-074.jpg",
+    "left": 252,
+    "top": 53176,
+    "w": 522,
+    "h": 648,
+    "z": 378,
+    "readymag": "upload-7c1a61d1-f955-4455-aac1-975b3cad4358.jpg"
+  },
+  {
+    "kind": "image",
+    "file": "photos-2003-2011-075.jpg",
+    "left": 255,
+    "top": 53874,
+    "w": 519,
+    "h": 648,
+    "z": 379,
+    "readymag": "upload-6c273f6c-2250-47be-8656-a47134d2d840.jpg"
+  }
+]
