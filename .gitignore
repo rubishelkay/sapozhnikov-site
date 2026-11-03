@@ -55,6 +55,7 @@ site/.astro/
 site/.cache/
 .cache/
 .parcel-cache/
+.wrangler/
 
 # --- Logs and dev artifacts ---
 .playwright-cli/

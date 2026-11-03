@@ -1,0 +1,22 @@
+# SpaceWeb / Apache equivalent of the Cloudflare Pages routing rules.
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteRule ^a-wonderful-day/?$ /a_wonderful_day/ [R=301,L]
+RewriteRule ^senza-titolo/?$ /senza_titolo/ [R=301,L]
+RewriteRule ^the-city/?$ /the_city/ [R=301,L]
+RewriteRule ^the-drama-machine/?$ /the_drama_machine/ [R=301,L]
+RewriteRule ^total-picture/?$ /total_picture/ [R=301,L]
+RewriteRule ^photos-2010/?$ /2010_photos/ [R=301,L]
+RewriteRule ^photos-2003-2011/?$ /2003-2011/ [R=301,L]
+RewriteRule ^index/?$ / [R=301,L]
+
+<IfModule mod_headers.c>
+  SetEnvIfNoCase Host "^sap\.shmol\.cc(:[0-9]+)?$" seo_preview
+  Header always set X-Robots-Tag "noindex" env=seo_preview
+</IfModule>
+
+<FilesMatch "^(_headers|_redirects)$">
+  Require all denied
+</FilesMatch>

@@ -11,6 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
+    "check:seo": "node scripts/check-seo.mjs",
+    "preview:pages": "npx --yes wrangler@4.120.1 pages dev dist --ip 127.0.0.1 --port 4193 --compatibility-date=2026-08-11",
     "assets:rename": "node scripts/rename-assets.mjs",
     "assets:report": "node scripts/report-assets.mjs"
   },
@@ -20,5 +22,8 @@
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^5.5.0",
     "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "parse5": "^7.3.0"
   }
 }

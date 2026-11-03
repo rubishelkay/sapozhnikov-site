@@ -1,0 +1,19 @@
+# Temporary Astro URLs -> original ReadyMag URLs. Query strings are preserved.
+/a-wonderful-day /a_wonderful_day/ 301
+/a-wonderful-day/ /a_wonderful_day/ 301
+/senza-titolo /senza_titolo/ 301
+/senza-titolo/ /senza_titolo/ 301
+/the-city /the_city/ 301
+/the-city/ /the_city/ 301
+/the-drama-machine /the_drama_machine/ 301
+/the-drama-machine/ /the_drama_machine/ 301
+/total-picture /total_picture/ 301
+/total-picture/ /total_picture/ 301
+/photos-2010 /2010_photos/ 301
+/photos-2010/ /2010_photos/ 301
+/photos-2003-2011 /2003-2011/ 301
+/photos-2003-2011/ /2003-2011/ 301
+
+# ReadyMag also used /index/ for its home link.
+/index / 301
+/index/ / 301
