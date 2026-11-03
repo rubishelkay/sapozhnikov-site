@@ -59,11 +59,14 @@ for (const [path, expected] of Object.entries(seo)) {
   assert(nodes.some((n) => n.tagName === 'h1' && text(n).trim()), `${path}: heading in initial HTML`);
   for (const node of nodes) {
     const href = attr(node, 'href');
-    if (node.tagName === 'a' && href?.startsWith('/')) {
+    // Cloudflare injects its email-protection link and decoder in live responses.
+    const protectedEmail = href?.startsWith('/cdn-cgi/l/email-protection#');
+    if (node.tagName === 'a' && href?.startsWith('/') && !protectedEmail) {
       assert(Object.hasOwn(seo, new URL(href, production).pathname), `${path}: invalid internal link ${href}`);
     }
     const src = attr(node, 'src');
-    if (src?.startsWith('/')) {
+    const emailDecoder = /^\/cdn-cgi\/scripts\/[a-z0-9]+\/cloudflare-static\/email-decode\.min\.js$/.test(src ?? '');
+    if (src?.startsWith('/') && !emailDecoder) {
       const file = resolve(dist, '.' + new URL(src, production).pathname);
       assert(existsSync(file), `${path}: missing asset ${src}`);
       if (node.tagName === 'img') {
@@ -132,7 +135,7 @@ for (const host of hosts) {
     assert.equal(/noindex/i.test(response.headers['x-robots-tag'] ?? ''), preview, `${host}${path}: indexing policy`);
   }
 }
-console.log('PASS: preview hosts noindex; production host indexable.');
+console.log(`PASS: indexing policy for ${hosts.join(', ')}.`);
 
 for (const src of [...images].filter((_, i) => i % 80 === 0)) {
   const response = await request(src);
